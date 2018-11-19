@@ -1,3 +1,4 @@
+import { Types } from 'mongoose';
 import GroceryItem from '../models/groceryItemsModel';
 
 const groceryController = {
@@ -27,7 +28,7 @@ const groceryController = {
       .then(groceryItems => {
         res.status(200).json(groceryItems);
       })
-      .catch(err => console.log(err));
+      .catch(err => res.status(500).json({ error: err }));
   },
 
   /**
@@ -36,12 +37,18 @@ const groceryController = {
    * @param { object }  req
    * @param { object }  res
    *
+   * @returns { object } groceryItem
    */
   retrieve(req, res) {
     const { _id } = req.params;
+    if (!Types.ObjectId.isValid(_id)) {
+      return res.status(422).json({
+        message: 'Grocery not found'
+      });
+    }
     GroceryItem.findById(_id, (error, groceryItem) => {
-      if (error) return error;
-      res.status(200).json(groceryItem);
+      if (error) throw error;
+      return res.status(200).json(groceryItem);
     });
   },
 
@@ -80,7 +87,8 @@ const groceryController = {
           .then(() => res.status(200).json({
             message: 'Purchase status changed',
             groceryItem
-          }));
+          }))
+          .catch(err => res.status(500).json({ err }));
       });
   }
 };

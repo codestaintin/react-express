@@ -1,0 +1,29 @@
+{
+  "setupFiles": [
+    "<rootDir>/src/__tests__/testSetup.js"
+  ],
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!src/api/*.js",
+    "!src/utils/*.js",
+    "!src/store.js",
+    "!src/Index.jsx",
+    "!src/reducers/index.js"
+  ],
+  "moduleNameMapper": {
+    "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
+    "^[./a-zA-Z0-9$_-]+\\.png$": "<rootDir>/RelativeImageStub.js",
+    "module_name_(.*)": "<rootDir>/substituted_module_$1.js",
+    "\\.(css|scss)$": "<rootDir>/src/__tests__/__mocks__/fileMock.js"
+  },
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "transformIgnorePatterns": [
+    "/node_modules/"
+  ],
+  "testEnvironment": "jest-environment-jsdom",
+  "testPathIgnorePatterns":["api", "__mocks__", "testSetup.js"]
+}
