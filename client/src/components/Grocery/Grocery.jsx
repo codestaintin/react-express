@@ -17,7 +17,7 @@ import GroceryList from './GroceryList';
  *
  * @returns {JSX}
  */
-class Grocery extends React.Component {
+export class Grocery extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);

@@ -28,7 +28,7 @@ const isLoading = bool => ({
 
 export const getAllGroceries = () => dispatch => {
   dispatch(isLoading(true));
-  axios.get('/api/v1/groceries')
+  return axios.get('/api/v1/groceries')
     .then((res) => {
       dispatch(getGroceriesSuccess(res.data));
       dispatch(isLoading(false));
@@ -39,7 +39,7 @@ export const getAllGroceries = () => dispatch => {
 };
 
 export const createGrocery = (name) => dispatch => {
-  axios.post('/api/v1/grocery', { name })
+  return axios.post('/api/v1/grocery', { name })
     .then((res) => {
       dispatch(createGroceriesSuccess(res.data.groceryItem));
     })
@@ -49,7 +49,7 @@ export const createGrocery = (name) => dispatch => {
 };
 
 export const deleteGrocery = id => dispatch => {
-  axios.delete(`/api/v1/grocery/${id}`)
+  return axios.delete(`/api/v1/grocery/${id}`)
     .then((res) => {
       dispatch(deleteGrocerySuccess(id));
     })
@@ -59,7 +59,7 @@ export const deleteGrocery = id => dispatch => {
 };
 
 export const purchaseGrocery = id => dispatch => {
-  axios.get(`api/v1/grocery/${id}/purchase`)
+  return axios.get(`api/v1/grocery/${id}/purchase`)
     .then((res) => {
       dispatch(purchaseGroceriesSuccess(id));
     })

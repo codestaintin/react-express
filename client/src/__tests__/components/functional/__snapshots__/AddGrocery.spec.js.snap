@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddGrocery> should render AddGrocery 1`] = `
+<div
+  className="container"
+>
+  <form
+    className="form-inline custom_form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group mx-sm-3 mb-2"
+    >
+      <input
+        className="form-control"
+        name="name"
+        onChange={[Function]}
+        pattern="^[a-zA-z ]*$"
+        placeholder="Add Grocery"
+        required={true}
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      className="btn btn-outline-primary mb-2"
+      type="submit"
+    >
+      Add Grocery
+    </button>
+  </form>
+</div>
+`;

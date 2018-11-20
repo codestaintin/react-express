@@ -9,27 +9,13 @@ const GroceryListRow = ({
       <th scope="row">&nbsp;</th>
       <td>{grocery.name}</td>
       <td>
-        {
-          grocery.purchased
-            ? (
-              <button
-                type="button"
-                className="btn btn-info"
-                onClick={() => handlePurchase(grocery._id)}
-              >
-              Bought
-              </button>
-            )
-            : (
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={() => handlePurchase(grocery._id)}
-              >
-              Buy
-              </button>
-            )
-        }
+        <button
+          type="button"
+          className={`btn ${grocery.purchased ? 'btn-info' : 'btn-primary'}`}
+          onClick={() => handlePurchase(grocery._id)}
+        >
+          {grocery.purchased ? 'Bought' : 'Buy'}
+        </button>
       </td>
       <td>
         <button
