@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GroceryListRow> should render GroceryListRow 1`] = `
+<Fragment>
+  <tr>
+    <th
+      scope="row"
+    >
+       
+    </th>
+    <td />
+    <td>
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+        type="button"
+      >
+        Buy
+      </button>
+    </td>
+    <td>
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete Item
+      </button>
+    </td>
+  </tr>
+</Fragment>
+`;

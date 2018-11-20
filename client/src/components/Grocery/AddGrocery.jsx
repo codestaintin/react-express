@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
  *
  * @returns {JSX}
  */
-class AddGrocery extends React.Component {
+export class AddGrocery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

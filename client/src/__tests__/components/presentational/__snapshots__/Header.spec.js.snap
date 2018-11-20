@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header> renders the Header component 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-primary custom_nav"
+>
+  <ul
+    className="navbar-nav"
+  >
+    <li
+      className="nav-item dropdown"
+    >
+      <Link
+        className="nav-link"
+        replace={false}
+        to="/"
+      >
+        Grocery
+      </Link>
+    </li>
+  </ul>
+</nav>
+`;

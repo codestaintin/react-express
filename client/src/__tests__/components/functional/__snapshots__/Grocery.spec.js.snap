@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grocery> should render Grocery 1`] = `
+<Fragment>
+  <AddGrocery
+    createGrocery={[Function]}
+  />
+  <h1
+    className="text-center"
+  >
+    Please add new items
+  </h1>
+</Fragment>
+`;
