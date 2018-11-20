@@ -1,0 +1,21 @@
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.custom_nav {
+  height: 10vh;
+}
+
+.custom_form {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.main-section {
+  margin-top: 10px;
+  background-image: linear-gradient(to top, #48c6ef 0%, #007bff 100%);
+  color: white;
+}
+
+.not-found {
+  min-height: 90vh;
+}

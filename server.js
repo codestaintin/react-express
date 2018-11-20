@@ -51,7 +51,7 @@ app.listen(port, (err) => {
   });
   db.on('open', () => {
     console.info(`Connected to database: ${config.database}`);
-    console.log(`App is running on port ${port}`);
+    console.log(`😅 App is running on port ${port}`);
   });
 });
 
