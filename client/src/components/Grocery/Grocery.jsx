@@ -96,7 +96,7 @@ Grocery.propTypes = {
   deleteGrocery: PropTypes.func.isRequired,
   createGrocery: PropTypes.func.isRequired,
   purchaseGrocery: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Grocery);
