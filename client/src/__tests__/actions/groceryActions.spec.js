@@ -88,4 +88,44 @@ describe('Grocery Action', () => {
         done();
       });
   });
+  it('should dispatch PURCHASE_GROCERY_SUCCESS', (done) => {
+    moxios.wait(() => {
+      const request = moxios.requests.mostRecent();
+      request.respondWith({
+        status: 200,
+        response: ''
+      });
+    });
+    const store = mockStore();
+    const expectedActions = [
+      {
+        type: actionTypes.PURCHASE_GROCERY_SUCCESS
+      }
+    ];
+    store.dispatch(purchaseGrocery())
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+        done();
+      });
+  });
+  it('should dispatch DELETE_GROCERY_SUCCESS', (done) => {
+    moxios.wait(() => {
+      const request = moxios.requests.mostRecent();
+      request.respondWith({
+        status: 200,
+        response: ''
+      });
+    });
+    const store = mockStore();
+    const expectedActions = [
+      {
+        type: actionTypes.DELETE_GROCERY_SUCCESS
+      }
+    ];
+    store.dispatch(deleteGrocery())
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+        done();
+      });
+  });
 });
