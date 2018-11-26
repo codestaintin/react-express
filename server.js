@@ -7,7 +7,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import routes from './server/routes/routes';
 import config from './server/config/config';
-import GroceryItem from './server/models/groceryItemsModel';
 
 dotenv.config();
 
